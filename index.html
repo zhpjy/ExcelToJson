@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="UTF-8">
@@ -23,23 +23,40 @@
 
 <body>
     <div class="container">
-        <div class="co12">
+        <div class="col12">
             <h1>Excel 转 JSON 工具</h1>
         </div>
         <hr>
         <div class="row">
-            <div class="col">
+            <div class="col-sm-2">
+                <label for="hasHeaderSelect">是否含表头：</label>
+                <select id="hasHeaderSelect">
+                    <option value="true">是</option>
+                    <option value="false">否</option>
+                </select>
+            </div>
+            <div class="col-sm-2" id="headerDirectionDiv">
+                <label for="headerDirectionSelect">表头方向：</label>
+                <select id="headerDirectionSelect">
+                    <option value="horizontal">横向</option>
+                    <option value="vertical">纵向</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
                 <label>Excel</label>
                 <textarea class="form-control" id="excelTextArea" rows="24"></textarea>
             </div>
-            <div class="col">
+            <div class="col-md-6">
                 <label>JSON</label>
                 <textarea class="form-control" id="jsonTextArea" rows="24"></textarea>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="js/control.js"></script>
+    <script type="text/javascript" src="js/dom.js"></script>
     <script type="text/javascript" src="js/excelToJson.js" async="async"></script>
 </body>
 

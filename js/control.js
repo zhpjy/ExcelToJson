@@ -1,13 +1,26 @@
-function setExcelTextAreaOnChange(){
+function setExcelTextAreaOnChange() {
     let excelTextArea = document.getElementById("excelTextArea");
     let jsonTextArea = document.getElementById("jsonTextArea");
 
-    excelTextArea.onchange=()=>{
-        jsonTextArea.value=excelStringToJsonStr(excelTextArea.value);
+    excelTextArea.onchange = () => {
+        jsonTextArea.value = excelStringToJsonStr(excelTextArea.value);
     }
-    excelTextArea.value="首先在这里输入"
-    jsonTextArea.value="然后点这里就可以复制结果";
+    excelTextArea.value = "首先在这里粘贴Excel"
+    jsonTextArea.value = "然后点这里就会自动生成Json并复制结果";
 }
 
+function setAutoSelect() {
+    let excelTextArea = document.getElementById("excelTextArea");
+    let jsonTextArea = document.getElementById("jsonTextArea");
+
+    excelTextArea.onclick = () => {
+        excelTextArea.select();
+    }
+    jsonTextArea.onclick = () => {
+        jsonTextArea.select();
+        document.execCommand('copy');
+    }
+}
+
+setAutoSelect();
 setExcelTextAreaOnChange();
-console.log("run")

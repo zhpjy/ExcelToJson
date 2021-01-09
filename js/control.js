@@ -6,7 +6,7 @@ function setExcelTextAreaOnChange() {
         jsonTextArea.value = excelStringToJsonStr(excelTextArea.value);
     }
     excelTextArea.value = "首先在这里粘贴Excel"
-    jsonTextArea.value = "然后点这里就会自动生成Json并复制结果";
+    jsonTextArea.value = "然后点这里就会自动生成JSON并复制结果";
 }
 
 function setAutoSelect() {

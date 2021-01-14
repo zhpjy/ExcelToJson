@@ -66,7 +66,7 @@ function autoConvert(str) {
     }
 
     if (!isNaN(str)) {
-        return parseInt(str);
+        return Number(str);
     }
 
     return str;
